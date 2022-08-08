@@ -1,3 +1,5 @@
+$errorColor: #F36747;
+
 .inputFieldContainer {
   line-height: 28px;
   font-size: 20px;
@@ -13,6 +15,9 @@
   color: white;
 }
 .wrongChar {
-  background-color: #F36747;
+  background-color: $errorColor;
   color:white;
+}
+.incorrectLayout {
+  color: $errorColor;
 }

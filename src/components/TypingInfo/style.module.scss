@@ -1,0 +1,9 @@
+.infoBlock {
+  display: flex;
+  & > p:not(:last-child) {
+    margin-right: 1rem;
+  }
+  & > p {
+    margin-bottom: 0;
+  }
+}

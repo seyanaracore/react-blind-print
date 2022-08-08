@@ -4,6 +4,7 @@ import ControlButtons from '../ControlButtons'
 import TypingInfo from '../TypingInfo'
 import TextInputContainer from '../TextInputContainer'
 import getBlindTypingReducer from './BlindTyping.reducer'
+import classes from './style.module.scss'
 
 function BlindTyping({ fetchText, textForTyping, saveTextResult }) {
   const [state, dispatch] = getBlindTypingReducer()
@@ -33,7 +34,6 @@ function BlindTyping({ fetchText, textForTyping, saveTextResult }) {
 
   return (
     <div>
-      <TypingInfo errorsCount={errorsCount} accuracy={accuracy} charsPerMinute={charsPerMinute} />
       <TextInputContainer
         textForTyping={textForTyping}
         textEnteredHandler={textEnteredHandler}
@@ -41,7 +41,10 @@ function BlindTyping({ fetchText, textForTyping, saveTextResult }) {
         expectedCharIndex={state.expectedCharIndex}
         isInputStarted={state.isInputStarted}
       />
-      <ControlButtons restartHandler={resetProgress} getNewTextHandler={fetchText} />
+      <aside className={classes.aside}>
+        <ControlButtons restartHandler={resetProgress} getNewTextHandler={fetchText} />
+        <TypingInfo errorsCount={errorsCount} accuracy={accuracy} charsPerMinute={charsPerMinute} />
+      </aside>
     </div>
   )
 }

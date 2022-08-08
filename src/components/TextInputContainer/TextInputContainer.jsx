@@ -83,7 +83,7 @@ export default function TextInputContainer({
 
   return (
     <div>
-      {incorrectLayout && <p>Неверная раскладка</p>}
+      {incorrectLayout && <p className={classes.incorrectLayout}>Неверная раскладка...</p>}
       <hr />
       <TextInputField
         textForTyping={textForTyping}

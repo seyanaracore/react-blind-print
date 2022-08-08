@@ -1,9 +1,10 @@
 import React from 'react'
 import textItemInfo from '@/typings/textItemInfo'
+import classes from './style.module.scss'
 
 function TypingInfo({ errorsCount, accuracy, charsPerMinute }) {
   return (
-    <div>
+    <div className={classes.infoBlock}>
       <p>
         Ошибок: <span>{errorsCount}</span>
       </p>
