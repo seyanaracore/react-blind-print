@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "clinyong.vscode-css-modules",
+    "rvest.vs-code-prettier-eslint",
+    "stylelint.vscode-stylelint"
+  ],
+}
