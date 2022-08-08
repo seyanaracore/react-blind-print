@@ -1,0 +1,18 @@
+.inputFieldContainer {
+  line-height: 28px;
+  font-size: 20px;
+  &:focus {
+    outline: none;
+  }
+}
+.enteredChar {
+  color: green;
+}
+.aviableChar {
+  background-color: green;
+  color: white;
+}
+.wrongChar {
+  background-color: #F36747;
+  color:white;
+}
