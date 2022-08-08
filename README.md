@@ -22,7 +22,7 @@ Runs linter fix for styles files.
 
 ### Deployment
 
-Vercel deploy: `react-blind-print.vercel.app`
+Vercel deploy: [https://react-blind-print.vercel.app/](https://react-blind-print.vercel.app/)
 
 For local deploy:
 1) Clone repository
