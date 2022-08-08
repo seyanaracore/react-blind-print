@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import textitem from '@/typings/textitem'
-import classes from './style.module.scss'
+import classes from './TextsHistory.module.scss'
 
 function TextsHistory({ textsHistoryList, deleteRecords }) {
   const deleteAllRecords = () => {

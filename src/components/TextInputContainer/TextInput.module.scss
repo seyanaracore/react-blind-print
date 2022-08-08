@@ -1,23 +1,30 @@
-$errorColor: #F36747;
+$error-color: #F36747;
 
 .inputFieldContainer {
-  line-height: 28px;
   font-size: 20px;
+  line-height: 28px;
+
   &:focus {
     outline: none;
   }
 }
+
 .enteredChar {
   color: green;
 }
+
 .aviableChar {
-  background-color: green;
   color: white;
+
+  background-color: green;
 }
+
 .wrongChar {
-  background-color: $errorColor;
   color:white;
+
+  background-color: $error-color;
 }
+
 .incorrectLayout {
-  color: $errorColor;
+  color: $error-color;
 }

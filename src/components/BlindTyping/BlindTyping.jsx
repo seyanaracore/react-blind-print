@@ -4,7 +4,7 @@ import ControlButtons from '../ControlButtons'
 import TypingInfo from '../TypingInfo'
 import TextInputContainer from '../TextInputContainer'
 import getBlindTypingReducer from './BlindTyping.reducer'
-import classes from './style.module.scss'
+import classes from './BlindTyping.module.scss'
 
 function BlindTyping({ fetchText, textForTyping, saveTextResult }) {
   const [state, dispatch] = getBlindTypingReducer()

@@ -1,6 +1,6 @@
 import React from 'react'
 import textItemInfo from '@/typings/textItemInfo'
-import classes from './style.module.scss'
+import classes from './TypingInfo.module.scss'
 
 function TypingInfo({ errorsCount, accuracy, charsPerMinute }) {
   return (

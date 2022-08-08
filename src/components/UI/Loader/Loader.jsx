@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './style.module.scss'
+import classes from './Loader.module.scss'
 
 const DIVS_COUNT = 12
 

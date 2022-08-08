@@ -4,7 +4,7 @@ import { AVADING_KEYS } from '@/constants'
 import useCharsPerMinute from '@/hooks/useCharsPerMinute'
 import layoutValidator from '@/utils/layoutValidator'
 import classNames from 'classnames'
-import classes from './style.module.scss'
+import classes from './TextInput.module.scss'
 import TextInputField from './TextInputField'
 
 export default function TextInputContainer({

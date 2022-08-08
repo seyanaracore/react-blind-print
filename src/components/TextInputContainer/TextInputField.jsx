@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import useEventListener from '@/hooks/useEventListener'
-import classes from './style.module.scss'
+import classes from './TextInput.module.scss'
 
 function TextInputField({ textForTyping, getClasses, inputHandler }) {
   const textInput = useRef()
