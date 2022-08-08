@@ -10,6 +10,7 @@ class Api {
 
       return response.json()
     } catch (e) {
+      // eslint-disable-next-line no-console
       return console.error(e)
     }
   }
