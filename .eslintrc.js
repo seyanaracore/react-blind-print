@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: ['react', 'import'],
   rules: {
+    'no-restricted-exports': 'off',
     'react/react-in-jsx-scope': 'off',
     'padding-line-between-statements': [
       'error',
