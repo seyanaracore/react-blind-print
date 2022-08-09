@@ -1,22 +1,26 @@
 /* eslint-disable no-console */
 /* eslint-disable consistent-return */
 class LocalStorageUtil {
-  static get(key = null) {
+  static get(key: string) {
     if (!key) return null
 
     try {
-      return JSON.parse(localStorage.getItem(key))
+      const lcItem = localStorage.getItem(key)
+
+      if (!lcItem) throw new Error('key not found')
+
+      return JSON.parse(lcItem)
     } catch (error) {
       console.error(error)
     }
   }
 
-  static set(value, key = null) {
+  static set(value: any, key: string) {
     if (!key) return
     localStorage.setItem(key, JSON.stringify(value))
   }
 
-  static delete(key) {
+  static delete(key: string) {
     if (!key) return
     localStorage.removeItem(key)
   }

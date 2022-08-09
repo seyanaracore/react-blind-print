@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'react-app',
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
@@ -20,6 +21,17 @@ module.exports = {
   plugins: ['react', 'import'],
   rules: {
     'no-restricted-exports': 'off',
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'react/react-in-jsx-scope': 'off',
     'padding-line-between-statements': [
       'error',
@@ -78,7 +90,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
         map: [['@', './src']],
       },
     },

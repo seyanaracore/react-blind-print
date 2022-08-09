@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/global.scss'
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import getText from '@/api/getText'
 import BlindTyping from './components/BlindTyping'
 import Header from './components/Header'
@@ -19,7 +19,7 @@ function App() {
     const [text] = response
 
     setTextForTyping(text)
-  }, [getText])
+  }, [])
 
   const [fetchText, error, isLoading] = useFetching(textFetcher)
 
@@ -64,7 +64,7 @@ function App() {
       LocalStorageUtil.set([...textsHistoryList, textWithId], LOCAL_TYPING_RESULTS_KEY)
       getTextsHistory()
     },
-    [getTextsHistory]
+    [textsHistoryList]
   )
 
   return (
