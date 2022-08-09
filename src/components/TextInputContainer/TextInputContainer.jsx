@@ -24,7 +24,7 @@ export default function TextInputContainer({
 
   useEffect(() => {
     dispatch({ type: 'setCharsPerMinute', payload: charsPerMinute }) // On every change dispatching actualy data to parent reducer
-  }, [charsPerMinute])
+  }, [charsPerMinute, dispatch])
 
   const inputHandler = useCallback(
     (e) => {
@@ -49,13 +49,13 @@ export default function TextInputContainer({
         setIsInputError(true) // Letter ui highlighting
       }
     },
-    [isInputError, textForTyping, expectedCharIndex]
+    [isInputStarted, dispatch, textForTyping, expectedCharIndex, isInputError]
   )
 
   useEffect(() => {
     // if expected char index equal text string length then text input is completed - call handler
     if (textForTyping && expectedCharIndex === textForTyping.length) textEnteredHandler()
-  }, [expectedCharIndex])
+  }, [expectedCharIndex, textEnteredHandler, textForTyping])
 
   useEffect(() => {
     const charsPerSecondWacher = isInputStarted ? startCpmWatcher() : null
@@ -68,7 +68,7 @@ export default function TextInputContainer({
     return () => {
       clearInterval(charsPerSecondWacher)
     }
-  }, [isInputStarted])
+  }, [clearCharsPerMinute, isInputStarted, startCpmWatcher])
 
   const getCharClasses = useCallback(
     // Letters hightlighting classes

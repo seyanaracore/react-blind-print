@@ -19,7 +19,7 @@ function App() {
     const [text] = response
 
     setTextForTyping(text)
-  }, [getText])
+  }, [])
 
   const [fetchText, error, isLoading] = useFetching(textFetcher)
 
@@ -64,7 +64,7 @@ function App() {
       LocalStorageUtil.set([...textsHistoryList, textWithId], LOCAL_TYPING_RESULTS_KEY)
       getTextsHistory()
     },
-    [getTextsHistory]
+    [textsHistoryList]
   )
 
   return (

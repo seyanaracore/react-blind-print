@@ -14,7 +14,7 @@ function BlindTyping({ fetchText, textForTyping, saveTextResult }) {
     const errorsPercent = +((errorsCount / textForTyping.length) * 100).toFixed(1)
 
     return 100 - errorsPercent || 100
-  }, [errorsCount, fetchText])
+  }, [errorsCount, textForTyping.length])
 
   const textEnteredHandler = () => {
     const textResult = {
