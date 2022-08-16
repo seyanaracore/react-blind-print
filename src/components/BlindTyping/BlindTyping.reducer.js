@@ -24,6 +24,6 @@ const reducer = (state, action) => {
   }
 }
 
-const getBlindTypingReducer = () => useReducer(reducer, initialState)
+const useBlindTypingReducer = () => useReducer(reducer, initialState)
 
-export default getBlindTypingReducer
+export default useBlindTypingReducer
